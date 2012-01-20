@@ -7,7 +7,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-import org.junit.Ignore;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.neo4j.helpers.collection.ClosableIterable;
@@ -20,34 +20,34 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration
 public class PlacesExplorationTest {
 	
-	private static final double MK_ENTRANCE_LATITUDE = -81.581198;
-	private static final double MK_ENTRANCE_LONGITUDE = 28.416191;
+	private static final double ONE_EIGHTH_MILE = 0.201168;
+	private static final double MK_ENTRANCE_LATITUDE = 28.416191;
+	private static final double MK_ENTRANCE_LONGITUDE = -81.581198;
 
 	private static final String[] NEAR_MK_ENTRANCE = {
-		"Entrance to the Magic Kingdom",
-		"Walt Disney World Railroad",
-		"Main Street Chamber of Commerce",
-		"Tony's Town Square Restaurant",
-		"Town Square Theater",
-		"City Hall",
-		"Ferryboat Landing",
-		"Boat Launch",
-		"Magic Kingdom Firehouse",
-		"Monorail Station",
-		"Harmony Barbershop",
-		"Main Street Bakery",
-		"Plaza Ice Cream Parlor",
-		"Casey's Corner",
-		"The Plaza Restaurant"
+			"Entrance to the Magic Kingdom",
+			"Walt Disney World Railroad",
+			"Main Street Chamber of Commerce",
+			"Tony's Town Square Restaurant",
+			"Town Square Theater",
+			"City Hall",
+			"Ferryboat Landing",
+			"Boat Launch",
+			"Magic Kingdom Firehouse",
+			"Monorail Station",
+			"Harmony Barbershop",
+			"Main Street Bakery",
+			"Plaza Ice Cream Parlor",
+			"Casey's Corner",
+			"The Plaza Restaurant"
 		};
 	
 	@Autowired
 	private PlaceRepository placesRepository;	
 	
-	@Test
+	@Before
 	public void loadPlaces() throws Exception {
 		InputStream is = null;
-		
 		try {
 			ClassPathResource placesResource = new ClassPathResource("DisneyWorldPlaces.txt", PlacesExplorationTest.class);
 			is = placesResource.getInputStream();
@@ -67,41 +67,39 @@ public class PlacesExplorationTest {
 				place.setFacebookId(facebookId);
 				placesRepository.save(place);
 			}
-			
 			long totalPlaces = placesRepository.count();
 			assertEquals(170, totalPlaces);
-			
-			ClosableIterable<Place> matches = placesRepository.findWithinDistance("PlaceLocation", 	MK_ENTRANCE_LATITUDE, MK_ENTRANCE_LONGITUDE, 0.2); // 0.2 = approx. 1/8 mile
-			ArrayList<Place> placeList = toArray(matches);
+		} finally {
+			is.close();
+		}
+	}
+	
+	@Test
+	public void testMagicKingdomLocations() throws Exception {		
+		try {
+			ArrayList<Place> placeList = findPlacesNear(MK_ENTRANCE_LONGITUDE, MK_ENTRANCE_LATITUDE, ONE_EIGHTH_MILE);
 			assertEquals(NEAR_MK_ENTRANCE.length, placeList.size());
 			// TODO: Assert placeList entries
 		} finally {
 			placesRepository.deleteAll();
-			is.close();
 		}
-		
 	}
 
+	private ArrayList<Place> findPlacesNear(double longitude, double latitude, double distanceKm) {
+		ClosableIterable<Place> matches = placesRepository.findWithinDistance("PlaceLocation", 	longitude, latitude, distanceKm);
+		ArrayList<Place> placeList = toArray(matches);
+		return placeList;
+	}
+
+
+	
 	private static ArrayList<Place> toArray(ClosableIterable<Place> matches) {
 		ArrayList<Place> placeList = new ArrayList<Place>();
 		for (Place place : matches) {
 			placeList.add(place);
+			System.out.println(place.getName());
 		}
 		return placeList;
-	}
-
-	@Test
-	@Ignore
-	public void extracted() throws Exception{
-		Thread.sleep(5000);
-		ClosableIterable<Place> matches = placesRepository.findWithinDistance("PlaceLocation", -81.58472, 28.420262, 0.499999);
-		System.out.println(matches);
-		int i=0;
-		for (Place place : matches) {
-			System.out.println(place.getName());
-			i++;
-		}
-		System.out.println("FOUND " + i);
 	}
 
 }
