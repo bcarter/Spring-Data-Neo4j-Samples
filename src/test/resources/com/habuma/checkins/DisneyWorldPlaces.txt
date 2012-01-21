@@ -168,3 +168,54 @@ O Canada	28.371904	-81.551728
 LeCellier Steakhouse	28.371601	-81.551468
 Refreshment Port	28.371757	-81.550585
 Promenada Refreshments	28.371807	-81.550011
+Entrance to Disney's Animal Kingdom	28.348542	-81.589644
+Walt Disney Resort Bus Station	28.352916	-81.590688
+The Oasis Exhibits	28.3558019	-81.5893672
+Rainforest Cafe	28.354745	-81.590713
+Outpost	28.354452	-81.590199
+Garden Gate Gifts	28.355593	-81.589869
+It's Tough to be a Bug!	28.35795	-81.590615
+Discovery Island Trails	28.35754	-81.59134
+The Tree of Life	28.357927	-81.590605
+Flame Tree Barbecue	28.357386	-81.589421
+Pizzafari	28.357244	-81.591358
+Beastly Bazaar	28.358001	-81.589764
+Island Mercantile	28.357049	-81.590642
+Disney Outfitters	28.357214	-81.590073
+Creature Comforts	28.357771	-81.591709
+Festival of the Lion King	28.355547	-81.592503
+Greeting Trails	28.356114	-81.592147
+Camp Soft Serve	28.355514	-81.591766
+Kilimanjaro Safaris	28.362893	-81.593792
+Pangani Forest Exploration Trail	28.360512927895	-81.592532104224
+Harambe Village Train Station	28.359739	-81.591428
+Dawa Bar	28.358519279812	-81.592007532609
+Tusker House Restaurant	28.358658568977	-81.592050608916
+Kusafiri Coffee Shop & Bakery	28.358884	-81.592143
+Harambe Fruit Market	28.359082	-81.592226
+Tamu Tamu Refreshments	28.358692415404	-81.591770686245
+Mombasa Marketplace	28.358871	-81.591822
+Rafiki's Planet Watch Train Station	28.363554	-81.589924
+Habitat Habit!	28.363666	-81.589755
+Conservation Station	28.363873	-81.593541
+Affection Section	28.365779	-81.589065
+Out of the Wild	28.365575	-81.588814
+Flights of Wonder	28.358864	-81.590003
+Maharajah Jungle Trek	28.35975871124	-81.58935560917
+Kali River Rapids	28.359574	-81.588652
+Expedition Everest - Legend of the Forbidden Mountain	28.358511	-81.586634
+Yak & Yeti Restaurant	28.358783	-81.589502
+Yak & Yeti Local Food Cafes	28.358783	-81.589502
+Amandapur Ice Cream Truck	28.358603	-81.587961
+Mandala Gifts	28.358501	-81.589179
+Serka Zong	28.35837037	-81.5872246
+The Boneyard	28.356822	-81.588501
+Fossil Fun Games	28.356755	-81.58798
+Finding Nemo - The Musical	28.357234	-81.587212
+Primeval Whirl	28.356392	-81.5876
+Tricera Top Spin	28.356399	-81.588196
+DINOSAUR	28.354907	-81.587915
+Restaurantosaurus	28.356139	-81.588973
+Trilo-Bite	28.356895	-81.589068
+The Dino Institute Shop	28.355582551676	-81.58832897105
+Chester & Hester's Dinosaur Treasures	28.355981	-81.587852

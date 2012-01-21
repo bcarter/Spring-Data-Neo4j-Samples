@@ -68,7 +68,7 @@ public class PlacesRepositoryTest {
 				placesRepository.save(place);
 			}
 			long totalPlaces = placesRepository.count();
-			assertEquals(170, totalPlaces);
+			assertEquals(221, totalPlaces);
 		} finally {
 			is.close();
 		}
