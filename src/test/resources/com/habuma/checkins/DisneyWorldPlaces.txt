@@ -69,7 +69,7 @@ Cosmic Ray's Starlight Cafe	28.41955	-81.579855	4b243385f964a520956324e3	1555895
 Auntie Gravity's Galactic Goodies	28.419076	-81.579671	4b3c24acf964a520378225e3	
 The Lunching Pad	28.418351	-81.579237	4b60806af964a52013ea29e3	165659406797650
 Tomorrowland Terrace Restaurant	28.418148	-81.5804	4b5b858cf964a5206a0429e3	123595134369806
-Entrance to Disney's Hollywood Studios	28.361364	-81.554392
+Entrance to Disney's Hollywood Studios	28.358658	-81.558434
 Disney Resort Bus Station	28.359047	-81.556264
 Disney's Hollywood Studios Ferry Terminal	28.359639	-81.558132
 The Great Movie Ride	28.356482	-81.560508
@@ -168,7 +168,7 @@ O Canada	28.371904	-81.551728
 LeCellier Steakhouse	28.371601	-81.551468
 Refreshment Port	28.371757	-81.550585
 Promenada Refreshments	28.371807	-81.550011
-Entrance to Disney's Animal Kingdom	28.348542	-81.589644
+Entrance to Disney's Animal Kingdom	28.355154	-81.590091
 Walt Disney Resort Bus Station	28.352916	-81.590688
 The Oasis Exhibits	28.3558019	-81.5893672
 Rainforest Cafe	28.354745	-81.590713
